@@ -122,7 +122,7 @@ ldapsearch -x -H ldap://localhost:10389 -b "dc=example,dc=org" -D "cn=admin,dc=e
 | alice    | Alice Smith   | alice@example.org      | Test@123  |
 | bob      | Bob Johnson   | bob@example.org        | Test@123  |
 | charlie  | Charlie Brown | charlie@example.org    | Test@123  |
-| ahmed    | Ahmed Fathi   | ahmed@example.org      | Test@123  |
+| ahmed    | Ahmed Mallah   | ahmed@example.org      | Test@123  |
 | muhammad | Muhammad Ali  | muhammad@example.org   | Test@123  |
 
 ## Integration with WSO2 IS
