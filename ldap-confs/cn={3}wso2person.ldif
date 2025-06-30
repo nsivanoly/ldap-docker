@@ -1,0 +1,52 @@
+# AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
+# CRC32 973f1064
+dn: cn=wso2person,cn=schema,cn=config
+objectClass: olcSchemaConfig
+cn: wso2person
+olcAttributeTypes: {0}( 1.3.6.1.4.1.37505.1.2 NAME 'gender' EQUALITY caseIgn
+ oreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1
+ .15{1024} )
+olcAttributeTypes: {1}( 1.3.6.1.4.1.37505.1.3 NAME 'country' EQUALITY caseIg
+ noreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.
+ 1.15{1024} )
+olcAttributeTypes: {2}( 1.3.6.1.4.1.37505.1.4 NAME 'nickName' EQUALITY caseI
+ gnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121
+ .1.15{1024} )
+olcAttributeTypes: {3}( 1.3.6.1.4.1.37505.1.5 NAME 'timeZone' EQUALITY caseI
+ gnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121
+ .1.15{1024} )
+olcAttributeTypes: {4}( 1.3.6.1.4.1.37505.1.6 NAME 'dateOfBirth' EQUALITY ca
+ seIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.
+ 121.1.15{1024} )
+olcAttributeTypes: {5}( 1.3.6.1.4.1.37505.1.7 NAME 'role' EQUALITY caseIgnor
+ eMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.1
+ 5{1024} )
+olcAttributeTypes: {6}( 1.3.6.1.4.1.37505.1.8 NAME 'im' EQUALITY caseIgnoreM
+ atch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{
+ 1024} )
+olcAttributeTypes: {7}( 1.3.6.1.4.1.37505.1.9 NAME 'url' EQUALITY caseIgnore
+ Match SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ {1024} )
+olcAttributeTypes: {8}( 1.3.6.1.4.1.37505.1.10 NAME 'otherPhone' EQUALITY ca
+ seIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.
+ 121.1.15{1024} )
+olcAttributeTypes: {9}( 1.3.6.1.4.1.37505.1.11 NAME 'privatePersonalIdentifi
+ er' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.
+ 1.4.1.1466.115.121.1.15{1024} )
+olcAttributeTypes: {10}( 1.3.6.1.4.1.37505.1.12 NAME 'profileconfiguration' 
+ EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.
+ 1.1466.115.121.1.15{1024} )
+olcAttributeTypes: {11}( 1.3.6.1.4.1.37505.1.13 NAME 'prefferedLanguage' EQU
+ ALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1
+ 466.115.121.1.15{1024} )
+olcAttributeTypes: {12}( 1.3.6.1.4.1.37505.1.83 NAME 'roles' EQUALITY caseIg
+ noreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.
+ 1.15{1024} )
+olcAttributeTypes: {13}( 1.3.6.1.4.1.37505.1.84 NAME 'websiteUrl' EQUALITY c
+ aseIgnoreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115
+ .121.1.15{1024} )
+olcObjectClasses: {0}( 1.3.6.1.4.1.37507.1.1 NAME 'wso2Person' DESC 'MANDATO
+ RY: wso2 person' SUP inetOrgPerson STRUCTURAL MAY ( gender $ country $ nick
+ Name $ timeZone $ dateOfBirth $ role $ im $ url $ otherPhone $ privatePerso
+ nalIdentifier $ profileconfiguration $ prefferedLanguage $ roles $ websiteU
+ rl ) )

@@ -1,0 +1,72 @@
+# Organizational Unit: employees
+dn: ou=employees,dc=example2,dc=org
+objectClass: top
+objectClass: organizationalUnit
+ou: employees
+description: Organizational Unit for Employees
+
+# Organizational Unit: Groups
+dn: ou=Groups,dc=example2,dc=org
+objectClass: top
+objectClass: organizationalUnit
+ou: Groups
+description: Organizational Unit for Groups
+
+# Group: developers
+dn: cn=developers,ou=Groups,dc=example2,dc=org
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: developers
+description: Development Team
+uniqueMember: uid=diana,ou=employees,dc=example2,dc=org
+uniqueMember: uid=frank,ou=employees,dc=example2,dc=org
+
+# Group: hr
+dn: cn=hr,ou=Groups,dc=example2,dc=org
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: hr
+description: Human Resources Team
+uniqueMember: uid=edward,ou=employees,dc=example2,dc=org
+
+# User: diana
+dn: uid=diana,ou=employees,dc=example2,dc=org
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: identityPerson
+uid: diana
+cn: Diana
+sn: Williams
+mail: diana@seller-delivery.com
+userPassword: Test@123
+scimId: b1369abc-90e6-43a5-b7ea-c71d84910de1
+
+# User: edward
+dn: uid=edward,ou=employees,dc=example2,dc=org
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: identityPerson
+uid: edward
+cn: Edward
+sn: Miller
+mail: edward@seller-delivery.com
+userPassword: Test@123
+scimId: b1369abc-90e6-43a5-b7ea-c71d84910de2
+
+# User: frank
+dn: uid=frank,ou=employees,dc=example2,dc=org
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: identityPerson
+uid: frank
+cn: Frank
+sn: Thompson
+mail: frank@seller-delivery.com
+userPassword: Test@123
+scimId: b1369abc-90e6-43a5-b7ea-c71d84910de3

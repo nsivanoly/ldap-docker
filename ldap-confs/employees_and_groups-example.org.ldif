@@ -1,0 +1,102 @@
+# Organizational Unit: employees
+dn: ou=employees,dc=example,dc=org
+objectClass: top
+objectClass: organizationalUnit
+ou: employees
+description: Organizational Unit for Employees
+
+# Organizational Unit: Groups
+dn: ou=Groups,dc=example,dc=org
+objectClass: top
+objectClass: organizationalUnit
+ou: Groups
+description: Organizational Unit for Groups
+
+# Group: developers
+dn: cn=developers,ou=Groups,dc=example,dc=org
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: developers
+description: Development Team
+uniqueMember: uid=alice,ou=employees,dc=example,dc=org
+uniqueMember: uid=charlie,ou=employees,dc=example,dc=org
+
+# Group: hr
+dn: cn=hr,ou=Groups,dc=example,dc=org
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: hr
+description: Human Resources Team
+uniqueMember: uid=bob,ou=employees,dc=example,dc=org
+uniqueMember: uid=ahmed,ou=employees,dc=example,dc=org
+uniqueMember: uid=muhammad,ou=employees,dc=example,dc=org
+
+# User: alice
+dn: uid=alice,ou=employees,dc=example,dc=org
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: identityPerson
+uid: alice
+cn: Alice
+sn: Smith
+mail: alice@example.org
+userPassword: Test@123
+scimId: a2369abc-80e6-43a5-b7ea-c71d84910de1
+
+# User: bob
+dn: uid=bob,ou=employees,dc=example,dc=org
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: identityPerson
+uid: bob
+cn: Bob
+sn: Johnson
+mail: bob@example.org
+userPassword: Test@123
+scimId: a2369abc-80e6-43a5-b7ea-c71d84910de2
+
+# User: charlie
+dn: uid=charlie,ou=employees,dc=example,dc=org
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: identityPerson
+uid: charlie
+cn: Charlie
+sn: Brown
+mail: charlie@example.org
+userPassword: Test@123
+scimId: a2369abc-80e6-43a5-b7ea-c71d84910de3
+
+# User: ahmed
+dn: uid=ahmed,ou=employees,dc=example,dc=org
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: identityPerson
+uid: ahmed
+cn: Ahmed
+sn: Mallah
+mail: ahmed@example.org
+userPassword: Test@123
+scimId: a2369abc-80e6-43a5-b7ea-c71d84910de4
+
+# User: muhammad
+dn: uid=muhammad,ou=employees,dc=example,dc=org
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: identityPerson
+uid: muhammad
+cn: Muhammad
+sn: Ali
+mail: muhammad@example.org
+userPassword: Test@123
+scimId: a2369abc-80e6-43a5-b7ea-c71d84910de5

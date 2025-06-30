@@ -1,0 +1,37 @@
+services:
+  openldap:
+    build: .
+    container_name: openldap
+    ports:
+      - "10389:389"
+      - "10636:636"
+    environment:
+      LDAP_ORGANISATION: "sampleOrg"
+      LDAP_DOMAIN: "example.org"
+      LDAP_ADMIN_PASSWORD: "admin"
+    volumes:
+      - ldap-data:/var/lib/ldap
+      - ldap-config:/etc/ldap/slapd.d
+    command: --copy-service
+    networks:
+      - ldap_net
+
+  phpldapadmin:
+    image: osixia/phpldapadmin:latest
+    container_name: phpldapadmin
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: openldap
+      PHPLDAPADMIN_HTTPS: "false"   # deactivate HTTPS
+    ports:
+      - "8081:80"
+    networks:
+      - ldap_net
+    depends_on:
+      - openldap
+
+volumes:
+  ldap-data:
+  ldap-config:
+
+networks:
+  ldap_net:
