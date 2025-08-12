@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><UserStoreManager class="org.wso2.carbon.user.core.ldap.UniqueIDActiveDirectoryUserStoreManager">
+      <Property name="BulkImportSupported">true</Property>
+      <Property name="GroupIDEnabled">true</Property>
+      <Property name="GroupCreatedDateAttribute">whenCreated</Property>
+      <Property name="UserDNPattern"/>
+      <Property name="GroupNameListFilter">(objectcategory=group)</Property>
+      <Property name="BackLinksEnabled">true</Property>
+      <Property name="defaultRealmName">dulsara.local</Property>
+      <Property name="MaxUserNameListLength">100</Property>
+      <Property name="PasswordJavaScriptRegEx">^[\S]{5,30}$</Property>
+      <Property name="WriteGroups">true</Property>
+      <Property name="ConnectionRetryDelay">120000</Property>
+      <Property name="LDAPInitialContextFactory">com.sun.jndi.ldap.LdapCtxFactory</Property>
+      <Property name="StartTLSEnabled">false</Property>
+      <Property name="SingleValuedAttributes">objectGuid,whenCreated,whenChanged,userPrincipalName</Property>
+      <Property name="EmptyRolesAllowed">true</Property>
+      <Property name="isADLDSRole">false</Property>
+      <Property name="ConnectionPoolingEnabled">false</Property>
+      <Property name="UserNameJavaScriptRegEx">[a-zA-Z0-9._-|//]{3,30}$</Property>
+      <Property name="ClaimOperationsSupported">true</Property>
+      <Property name="MaxRoleNameListLength">100</Property>
+      <Property name="ConnectionURL">ldaps://WIN-88VPQD8GBAE.dulsara.local:636</Property>
+      <Property name="Disabled">false</Property>
+      <Property name="MultiAttributeSeparator">,</Property>
+      <Property name="userAccountControl">512</Property>
+      <Property name="RetryAttempts">0</Property>
+      <Property name="RoleDNPattern"/>
+      <Property name="PasswordJavaRegEx">^[\S]{5,30}$</Property>
+      <Property name="ReadOnly">false</Property>
+      <Property name="ImmutableAttributes">objectGuid,whenCreated,whenChanged,userPrincipalName</Property>
+      <Property name="DomainName">Active-Directory-Read-Write</Property>
+      <Property name="UserNameJavaRegEx">[a-zA-Z0-9._-|//]{3,30}$</Property>
+      <Property name="UserEntryObjectClass">user</Property>
+      <Property name="UserRolesCacheEnabled">true</Property>
+      <Property name="MembershipAttributeRange">1500</Property>
+      <Property name="ConnectionRetryCount">2</Property>
+      <Property name="UserNameSearchFilter">(&amp;(objectClass=user)(cn=?))</Property>
+      <Property name="CaseInsensitiveUsername">true</Property>
+      <Property name="UserNameListFilter">(objectClass=user)</Property>
+      <Property name="transformObjectGUIDToUUID">true</Property>
+      <Property name="UserNameAttribute">cn</Property>
+      <Property name="UserSearchBase">OU=TestOU,DC=dulsara,DC=local</Property>
+      <Property name="MembershipAttribute">member</Property>
+      <Property name="Class">org.wso2.carbon.user.core.ldap.UniqueIDActiveDirectoryUserStoreManager</Property>
+      <Property name="LDAPConnectionTimeout">5000</Property>
+      <Property name="MemberOfAttribute">memberOf</Property>
+      <Property name="ReadGroups">true</Property>
+      <Property name="Description">Active Directory Read Write</Property>
+      <Property name="GroupSearchBase">OU=TestOU,DC=dulsara,DC=local</Property>
+      <Property name="DisplayNameAttribute"/>
+      <Property name="java.naming.ldap.attributes.binary">objectGuid</Property>
+      <Property name="GroupNameAttribute">cn</Property>
+      <Property name="ReadTimeout">5000</Property>
+      <Property name="UserIDAttribute">objectGuid</Property>
+      <Property name="UseCaseSensitiveUsernameForCacheKeys">true</Property>
+      <Property name="ConnectionName">CN=Administrator,CN=Users,DC=dulsara,DC=local</Property>
+      <Property name="GroupNameSearchFilter">(&amp;(objectClass=group)(cn=?))</Property>
+      <Property name="GroupEntryObjectClass">group</Property>
+      <Property name="UserIdSearchFilter">(&amp;(objectClass=user)(objectGuid=?))</Property>
+      <Property encrypted="true" name="ConnectionPassword">eyJjIjoiZXlKamFYQm9aWElpT2lKUFZGcEJhR2xPY0daNWRHZzFSbFphYm5GTFdXTjRWbWxvTWxGNU5uWXlTMmRCTkZWVFJsRTlJaXdpYVc1cGRHbGhiR2w2WVhScGIyNVdaV04wYjNJaU9pSkJUelZZZFRGeU1rVm1Rek5SWms5VldtSjRiVXRSUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRTlJaXdpYTJWNVNXUWlPaUpaY0ZGWlNuQnZjVU5XVEdwVVZEaEZTbk5oT0Rka1MycExUSGMzWVdrMFZWZFJNMjluYWpCd01UWTBQU0o5IiwidCI6IkFFUy9HQ00vTm9QYWRkaW5nIiwiaXYiOiJBTzVYdTFyMkVmQzNRZk9VWmJ4bUtRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9In0=</Property>
+      <Property name="CountRetrieverClass"/>
+      <Property name="RoleNameJavaRegEx">[a-zA-Z0-9._-|//]{3,30}$</Property>
+      <Property name="RoleNameJavaScriptRegEx">^[\S]{3,30}$</Property>
+      <Property name="DateAndTimePattern">[uuuuMMddHHmmss[,SSS][.SSS]X][uuuuMMddHHmmss[,SS][.SS]X][uuuuMMddHHmm[,S][.S]X][uuuuMMddHHmmss[.S]X]</Property>
+      <Property name="TimestampAttributes">whenCreated,whenChanged</Property>
+      <Property name="GroupIdAttribute">objectGuid</Property>
+      <Property name="GroupLastModifiedDateAttribute">whenChanged</Property>
+      <Property name="Referral">follow</Property>
+      <Property name="UserDNCacheEnabled">true</Property>
+      <Property name="kdcEnabled">false</Property>
+      <Property name="UsernameJavaRegExViolationErrorMsg">Username pattern policy violated.</Property>
+      <Property name="PasswordJavaRegExViolationErrorMsg">Password pattern policy violated.</Property>
+      <Property name="PasswordHashMethod">PLAIN_TEXT</Property>
+      <Property name="UserCacheExpiryMilliseconds"/>
+      <Property name="DomainName">Active-Directory-Read-Write</Property>
+      <Property name="Description">Active Directory Read Write</Property>
+</UserStoreManager>

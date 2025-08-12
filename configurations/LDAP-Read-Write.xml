@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><UserStoreManager class="org.wso2.carbon.user.core.ldap.UniqueIDReadWriteLDAPUserStoreManager">
+      <Property name="BulkImportSupported">true</Property>
+      <Property name="GroupIDEnabled">false</Property>
+      <Property name="GroupCreatedDateAttribute">createTimestamp</Property>
+      <Property name="UserDNPattern"/>
+      <Property name="GroupNameListFilter">(objectClass=groupOfUniqueNames)</Property>
+      <Property name="BackLinksEnabled">false</Property>
+      <Property name="defaultRealmName">WSO2.ORG</Property>
+      <Property name="MaxUserNameListLength">100</Property>
+      <Property name="PasswordJavaScriptRegEx">^[\S]{5,30}$</Property>
+      <Property name="WriteGroups">true</Property>
+      <Property name="ConnectionRetryDelay">120000</Property>
+      <Property name="LDAPInitialContextFactory">com.sun.jndi.ldap.LdapCtxFactory</Property>
+      <Property name="StartTLSEnabled">false</Property>
+      <Property name="EmptyRolesAllowed">true</Property>
+      <Property name="ConnectionPoolingEnabled">false</Property>
+      <Property name="UserNameJavaScriptRegEx">[a-zA-Z0-9._-|//]{3,30}$</Property>
+      <Property name="ClaimOperationsSupported">true</Property>
+      <Property name="MaxRoleNameListLength">100</Property>
+      <Property name="ConnectionURL">ldap://demo.apps.siva.com:10389</Property>
+      <Property name="Disabled">false</Property>
+      <Property name="MultiAttributeSeparator">,</Property>
+      <Property name="RetryAttempts">0</Property>
+      <Property name="RoleDNPattern"/>
+      <Property name="PasswordJavaRegEx">^[\S]{5,30}$</Property>
+      <Property name="ReadOnly">false</Property>
+      <Property name="ImmutableAttributes"/>
+      <Property name="DomainName">LDAP-Read-Write</Property>
+      <Property name="UserNameJavaRegEx">[a-zA-Z0-9._-|//]{3,30}$</Property>
+      <Property name="UserEntryObjectClass">identityPerson</Property>
+      <Property name="UserRolesCacheEnabled">true</Property>
+      <Property name="MembershipAttributeRange">0</Property>
+      <Property name="ConnectionRetryCount">2</Property>
+      <Property name="UserNameSearchFilter">(&amp;(objectClass=identityPerson)(uid=?))</Property>
+      <Property name="CaseInsensitiveUsername">true</Property>
+      <Property name="UserNameListFilter">(objectClass=identityPerson)</Property>
+      <Property name="UserNameAttribute">uid</Property>
+      <Property name="UserSearchBase">ou=employees,dc=example,dc=org</Property>
+      <Property name="MembershipAttribute">uniqueMember</Property>
+      <Property name="Class">org.wso2.carbon.user.core.ldap.UniqueIDReadWriteLDAPUserStoreManager</Property>
+      <Property name="LDAPConnectionTimeout">5000</Property>
+      <Property name="MemberOfAttribute"/>
+      <Property name="ReadGroups">true</Property>
+      <Property name="Description">LDAP Read Write</Property>
+      <Property name="GroupSearchBase">ou=Groups,dc=example,dc=org</Property>
+      <Property name="DisplayNameAttribute"/>
+      <Property name="java.naming.ldap.attributes.binary"/>
+      <Property name="GroupNameAttribute">cn</Property>
+      <Property name="ReadTimeout">5000</Property>
+      <Property name="UserIDAttribute">scimId</Property>
+      <Property name="UseCaseSensitiveUsernameForCacheKeys">true</Property>
+      <Property name="ConnectionName">cn=admin,dc=example,dc=org</Property>
+      <Property name="GroupNameSearchFilter">(&amp;(objectClass=groupOfUniqueNames)(cn=?))</Property>
+      <Property name="GroupEntryObjectClass">groupOfUniqueNames</Property>
+      <Property name="UserIdSearchFilter">(&amp;(objectClass=identityPerson)(scimId=?))</Property>
+      <Property encrypted="true" name="ConnectionPassword">eyJjIjoiZXlKamFYQm9aWElpT2lKd1JGUTJTbHB4UkdOa1RHVXlWRFpoUW05MFZuSmxiamhoUVU5aUlpd2lhVzVwZEdsaGJHbDZZWFJwYjI1V1pXTjBiM0lpT2lKdE4wc3JNMFp5TTBWbVEyMTFjMjFQYlZCU1NGUkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVGQlFVRkJRVUZCUVVFOUlpd2lhMlY1U1dRaU9pSlpjRkZaU25CdmNVTldUR3BVVkRoRlNuTmhPRGRrUzJwTFRIYzNZV2swVlZkUk0yOW5hakJ3TVRZMFBTSjkiLCJ0IjoiQUVTL0dDTS9Ob1BhZGRpbmciLCJpdiI6Im03SyszRnIzRWZDbXVzbU9tUFJIVEFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQT0ifQ==</Property>
+      <Property name="CountRetrieverClass"/>
+      <Property name="RoleNameJavaRegEx">[a-zA-Z0-9._-|//]{3,30}$</Property>
+      <Property name="RoleNameJavaScriptRegEx">^[\S]{3,30}$</Property>
+      <Property name="DateAndTimePattern"/>
+      <Property name="TimestampAttributes"/>
+      <Property name="GroupIdAttribute">entryUUID</Property>
+      <Property name="GroupLastModifiedDateAttribute">modifyTimestamp</Property>
+      <Property name="Referral">follow</Property>
+      <Property name="UserDNCacheEnabled">true</Property>
+      <Property name="kdcEnabled">false</Property>
+      <Property name="UsernameJavaRegExViolationErrorMsg">Username pattern policy violated.</Property>
+      <Property name="PasswordJavaRegExViolationErrorMsg">Password pattern policy violated.</Property>
+      <Property name="PasswordHashMethod">PLAIN_TEXT</Property>
+      <Property name="UserCacheExpiryMilliseconds"/>
+      <Property name="DomainName">LDAP-Read-Write</Property>
+      <Property name="Description">LDAP Read Write</Property>
+</UserStoreManager>

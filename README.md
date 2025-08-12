@@ -49,7 +49,7 @@ This project provides a complete Docker-based OpenLDAP server with phpLDAPadmin 
    ```bash
    ./start.sh
    ```
-4. Access phpLDAPadmin at `http://localhost:8081`
+4. Access phpLDAPadmin at `http://localhost:8082`
 
 5. Stop services
    ```bash
@@ -81,7 +81,7 @@ This project provides a complete Docker-based OpenLDAP server with phpLDAPadmin 
 |----------------|----------------|-----------|
 | OpenLDAP       | 389            | 10389     |
 | OpenLDAP (SSL) | 636            | 10636     |
-| phpLDAPadmin   | 80             | 8081      |
+| phpLDAPadmin   | 80             | 8082      |
 
 ### Environment Variables
 | Variable               | Default Value    | Description                     |
@@ -93,7 +93,7 @@ This project provides a complete Docker-based OpenLDAP server with phpLDAPadmin 
 ## Accessing the Services
 
 ### phpLDAPadmin Web Interface
-- URL: `http://localhost:8081`
+- URL: `http://localhost:8082`
 - Login DN: `cn=admin,dc=example,dc=org`
 - Password: `admin`
 
@@ -127,92 +127,11 @@ ldapsearch -x -H ldap://localhost:10389 -b "dc=example,dc=org" -D "cn=admin,dc=e
 
 ## Integration with WSO2 IS
 
-### Configuration Snippet
-Add to your WSO2 Identity Server's `deployment.toml`:
+### Configurations
+Sampel configurations
+- [Read only LDAP](configurations/LDAP-Read-Only.xml)
+- [Read Write LDAP](configurations/LDAP-Read-Write.xml)
 
-```toml
-[[user_store]]
-type = "UniqueIDReadWriteLDAPUserStoreManager"
-class = "org.wso2.carbon.user.core.ldap.UniqueIDReadWriteLDAPUserStoreManager"
-domain_name = "LDAP-RW"
-description = "LDAP RW"
-connection_url = "ldap://localhost:10389"
-connection_name = "cn=admin,dc=example,dc=org"
-connection_password = "admin"
-
-user_search_base = "ou=employees,dc=example,dc=org"
-user_name_attribute = "uid"
-user_name_search_filter = "(&(objectClass=identityPerson)(uid=?))"
-user_name_list_filter = "(objectClass=identityPerson)"
-user_entry_object_class = "identityPerson"
-user_dn_pattern = ""
-user_id_attribute = "scimId"
-user_id_search_filter = "(&(objectClass=identityPerson)(scimId=?))"
-
-read_only = false
-read_groups = true
-write_groups = true
-
-group_search_base = "ou=groups,dc=example,dc=org"
-group_entry_object_class = "groupOfUniqueNames"
-group_name_attribute = "cn"
-group_name_list_filter = "(objectClass=groupOfUniqueNames)"
-group_name_search_filter = "(&(objectClass=groupOfUniqueNames)(cn=?))"
-membership_attribute = "uniqueMember"
-
-bulk_import_supported = true
-unique_id = "a62cdce7-7713-4394-89a7-74b8a61845c3"
-group_id_enabled = false
-group_id_attribute = "cn"
-group_created_date_attribute = "createTimestamp"
-group_last_modified_date_attribute = "modifyTimestamp"
-memberof_attribute = ""
-
-ldap_initial_context_factory = "com.sun.jndi.ldap.LdapCtxFactory"
-start_tls_enabled = false
-ldap_connection_timeout = 5000
-connection_retry_delay = 120000
-connection_retry_count = 2
-retry_attempts = 0
-connection_pooling_enabled = false
-read_timeout = 5000
-referral = "follow"
-
-case_insensitive_username = true
-user_roles_cache_enabled = true
-user_dn_cache_enabled = true
-use_case_sensitive_username_for_cache_keys = true
-
-default_realm_name = "WSO2.ORG"
-multi_attribute_separator = ","
-membership_attribute_range = "0"
-immutable_attributes = ""
-count_retriever_class = ""
-timestamp_attributes = ""
-date_and_time_pattern = ""
-display_name_attribute = ""
-java.naming.ldap.attributes.binary = ""
-
-user_cache_expiry_milliseconds = ""
-
-password_hash_method = "PLAIN_TEXT"
-password_java_regex = "^[\\S]{5,30}$"
-password_javascript_regex = "^[\\S]{5,30}$"
-password_java_regex_violation_error_msg = "Password pattern policy violated."
-username_java_regex_violation_error_msg = "Username pattern policy violated."
-user_name_java_regex = "[a-zA-Z0-9._-|//]{3,30}$"
-user_name_javascript_regex = "[a-zA-Z0-9._-|//]{3,30}$"
-role_name_java_regex = "[a-zA-Z0-9._-|//]{3,30}$"
-role_name_javascript_regex = "^[\\S]{3,30}$"
-
-claim_operations_supported = true
-empty_roles_allowed = true
-back_links_enabled = false
-kdc_enabled = false
-max_user_name_list_length = 100
-max_role_name_list_length = 100
-disabled = false
-```
 
 ## References
 1. [OpenLDAP Official Documentation](https://www.openldap.org/doc/)
